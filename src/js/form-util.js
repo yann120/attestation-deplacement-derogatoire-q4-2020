@@ -216,8 +216,8 @@ export function listenToInputChanges () {
       const name = data.alias || data.key
       const input = document.getElementById('field-' + data.key)
       input.addEventListener('input', (e) => {
-        window.location.hash = cleanParams()
         setParam(name, e.target.value)
+        window.location.hash = cleanParams()
         params = new URLSearchParams(window.location.hash.substr(1))
       })
     })
