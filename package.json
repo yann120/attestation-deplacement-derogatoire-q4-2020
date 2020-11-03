@@ -3,29 +3,24 @@
   "version": "1.0.5",
   "description": "Générateur d'attestation de déplacement dérogatoire'",
   "main": "certificate.js",
-  "engines": {
-    "node": "10.15.2"
-  },
   "scripts": {
     "lint": "eslint src/**/*.js",
     "preformat": "prettier --write \"src/**/*.js\"",
     "format": "npm run lint -- --fix",
     "start": "parcel ./src/index.html",
-    "start:grid": "parcel ./src/grid.html",
+    "start:grid": "cross-env VERSION=localversion parcel ./src/grid.html",
     "clean:dist": "rimraf dist",
     "prebuild": "run-p lint clean:dist",
     "build:simple": "cross-env-shell VERSION=$npm_package_version parcel build --public-url $PUBLIC_URL ./src/index.html ./src/robots.txt ./src/sitemap.xml",
-    "postbuild": "cross-env-shell",
+    "build": "cross-env npm run build:simple",
+    "postbuild": "cross-env-shell react-snap",
     "prebuild:ci": "run-p lint clean:dist",
     "build:ci": "cross-env npm run build:simple",
-    "postbuild:ci": "cross-env-shell",
+    "postbuild:ci": "cross-env-shell react-snap",
     "build:dev": "cross-env PUBLIC_URL='/' npm run build:simple",
     "preserve": "npm run build",
     "serve": "serve dist",
-    "serve:dist": "serve dist",
-    "build": "parcel src/index.html -- open",
-    "heroku-prebuild": "",
-    "heroku-postbuild": "parcel build src/index.html"
+    "serve:dist": "serve dist"
   },
   "repository": {
     "type": "git",
