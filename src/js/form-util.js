@@ -1,7 +1,7 @@
 import removeAccents from 'remove-accents'
 
 import { $, $$, downloadBlob } from './dom-utils'
-import { addSlash, getFormattedDate, setParam, getParam, cleanParams } from './util'
+import { addSlash, getFormattedDate, setParam, getParam } from './util'
 import pdfBase from '../certificate.pdf'
 import { generatePdf } from './pdf-util'
 
