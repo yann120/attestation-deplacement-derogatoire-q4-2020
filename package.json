@@ -68,7 +68,8 @@
     "bootstrap": "^4.5.3",
     "parcel": "^1.12.4",
     "pdf-lib": "^1.11.2",
-    "qrcode": "^1.4.4"
+    "qrcode": "^1.4.4",
+    "remove-accents": "^0.4.2"
   },
   "browserslist": [
     "last 5 versions"
