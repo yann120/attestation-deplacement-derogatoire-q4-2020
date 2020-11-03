@@ -37,8 +37,7 @@
   "bugs": {
     "url": "https://github.com/lab-mi/attestation-deplacement-derogatoire-q4-2020/issues"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
